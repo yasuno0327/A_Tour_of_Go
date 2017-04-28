@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-var i, j = 1, 2
+var i, j int = 1,2
 
 func main() {
-	var c, java, python bool
-	fmt.Println(i, j, c, java, python)
+  var c, python, java = true, false, "no!"
+  fmt.Println(i, j, c, python, java)
 }

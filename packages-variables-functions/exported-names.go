@@ -1,10 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"math"
+import(
+  "fmt"
+  "math"
 )
 
 func main() {
-	fmt.Println("My favorite number is", math.Pi)
+  fmt.Println(math.Pi)
 }

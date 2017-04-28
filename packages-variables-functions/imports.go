@@ -1,11 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"math"
-	"math/rand"
+import(
+  "fmt"
+  "math"
 )
 
 func main() {
-	fmt.Println("I love", math.Sqrt(float64(rand.Intn(1000))))
+  fmt.Printf("Now you have %g problems.\n", math.Sqrt(7))
 }
