@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 type Vertex struct {
-  X int
-  Y int
+  x int
+  y int
 }
 
 func main() {
