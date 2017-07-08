@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
   "fmt"
   "math"
 )
@@ -11,8 +11,9 @@ type Abser interface {
 
 func main() {
   var a Abser
+
   f := MyFloat(-math.Sqrt2)
-  v := Vertex{3, 4}
+  v := Vertex{3,4}
   a = f
   a = &v
 
@@ -29,9 +30,9 @@ func (f MyFloat) Abs() float64 {
 }
 
 type Vertex struct {
-  X, Y float64
+  x, y float64
 }
 
 func (v *Vertex) Abs() float64 {
-  return math.Sqrt(v.X * v.X + v.Y * v.Y)
+  return math.Sqrt(v.x * v.x + v.y * v.y)
 }

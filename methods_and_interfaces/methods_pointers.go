@@ -1,25 +1,37 @@
 package main
 
-import(
+import (
   "fmt"
   "math"
 )
 
 type Vertex struct {
-  X, Y float64
+  x, y float64
 }
 
 func (v Vertex) Abs() float64 {
-  return math.Sqrt(v.X * v.X + v.Y * v.Y)
+  return math.Sqrt(v.x * v.x + v.y * v.y)
 }
 
 func (v *Vertex) Scale(f float64) {
-  v.X = v.X * f  //アドレスの示す先を更新している
-  v.Y = v.Y * f
+  v.x = v.x * f
+  v.y = v.y * f
+}
+
+func ScaleFunc(v *Vertex, f float64) {
+  v.x = v.x * f
+  v.y = v.y * f
 }
 
 func main() {
-  v := Vertex{ 3, 4 }
+  v := Vertex{3,4}
   v.Scale(10)
+  fmt.Println(v)
   fmt.Println(v.Abs())
+
+  p := &Vertex{4,3}
+  p.Scale(3)
+  ScaleFunc(p, 8)
+
+  fmt.Println(v, p)
 }

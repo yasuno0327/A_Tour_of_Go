@@ -15,6 +15,6 @@ func (t T) M() {
 }
 
 func main() {
-  var i I = T{"hello"}
+  var i I = T{"Hello"}
   i.M()
 }

@@ -1,40 +1,12 @@
+
 package main
 
-import (
-  "fmt"
-  "math"
-)
+import "fmt"
 
-type I interface {
-  M()
-}
-
-type T struct {
-  S string
-}
-
-func (t *T) M() {
-  fmt.Println(t.S)
-}
-
-type F float64
-
-func (f F) M() {
-  fmt.Println(f)
+type Vertex struct {
+  x, y float64
 }
 
 func main() {
-  var i I
 
-  i = &T{"hello"}
-  describe(i)
-  i.M()
-
-  i = F(math.Pi)
-  describe(i)
-  i.M()
-}
-
-func describe(i I) {
-  fmt.Printf("(%v, %T)\n", i, i)
 }
